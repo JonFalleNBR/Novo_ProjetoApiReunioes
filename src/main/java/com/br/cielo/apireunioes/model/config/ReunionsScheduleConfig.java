@@ -2,8 +2,10 @@ package com.br.cielo.apireunioes.model.config;
 
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+@Configuration
 @EnableScheduling
 @ConditionalOnProperty(name = "scheduler.enabled", matchIfMissing = true) //Remover após concluir as etapas de teste
 public class ReunionsScheduleConfig {
