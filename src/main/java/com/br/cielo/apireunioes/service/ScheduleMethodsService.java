@@ -57,7 +57,5 @@ public class ScheduleMethodsService {
 
     4 - Às vezes, atrasos e taxas não são suficientes, e precisamos da flexibilidade de uma expressão de cron para controlar o cronograma de nossas tarefas.
 
-
-
      */
 }
