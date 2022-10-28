@@ -18,7 +18,6 @@ public class ScheduleMethodsService {
                 "Fixed delay task - " + System.currentTimeMillis() / 1000);
     }
 
-
     @Scheduled(fixedRate = 1000)
     public void scheduleFixedRateTask() {
         logger.log(Level.INFO, "Fixed rate task - " + System.currentTimeMillis() / 1000);
