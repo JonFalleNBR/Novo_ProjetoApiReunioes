@@ -1,35 +1,30 @@
-package com.br.cielo.apireunioes.model.dtos;
+package com.br.cielo.apireunioes.model;
 
 
-import com.br.cielo.apireunioes.repository.ApiReunioesRepository;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.beans.factory.annotation.Autowired;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 
-@Getter
-@Setter
+
+@Data
 @Entity
-@Table(name ="REUNIOES")
+@Table(name = "REUNIOES")
 public class Reunioes {
 
 
-    @Autowired
-    ApiReunioesRepository apiReunioesRepository;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
-    @NotBlank
     @OneToOne
     private Organizador organizador;
-    @NotBlank
+
     @ManyToOne
     private Funcionarios participantes;
 
